@@ -1,0 +1,3 @@
+VCD info: dumpfile wave.vcd opened for output.
+PASS traffic: full cycle, pedestrian blink, flicker, reset
+C:\Users\young\Documents\fpga_lab5\circuits\02_traffic\sim\tb_design.v:46: $finish called at 2186000 (1ps)

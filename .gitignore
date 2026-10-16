@@ -1,0 +1,22 @@
+**/build/
+**/vivado/
+**/__pycache__/
+*.pyc
+**/.Xil/
+*.jou
+*.str
+.DS_Store
+Thumbs.db
+
+# Vivado가 나중에 만드는 산출물은 별도 증빙만 선별해 저장합니다.
+*.xpr
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.gen/
+
+# 편집 가능한 보고서 원본은 로컬에 두고 제출용 PDF만 추적합니다.
+reports/pre/*.hwpx
+reports/post/*.hwpx

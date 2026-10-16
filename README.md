@@ -1,0 +1,46 @@
+# FPGA LAB5 · STM32_1 인터럽트·PWM / 피아노·신호등·ADC
+
+10월 19일 실험을 위한 예비 실습 저장소다. STM32 과제 3·4의 교체용 `ece2_474_routine.c`와 FPGA 세 회로의 RTL, 자기검사 테스트벤치, 시뮬레이션 설정을 포함한다.
+
+## 실습 구성
+
+| 구분 | 폴더 | 준비된 검증 |
+|---|---|---|
+| STM32 과제3 | `stm32/task3_interrupt_led/` | PC13 EXTI 디바운스, TIM6 100 ms 계수, PA5 1/2/4/8초 반전 |
+| STM32 과제4 | `stm32/task4_pwm_duty/` | PC13 EXTI 디바운스, TIM3 CH1 PB4 1 kHz PWM, 25/50/75% 순환 |
+| FPGA 피아노 | `circuits/01_piano/` | 8개 음, 무입력, 다중 키, 리셋 |
+| FPGA 신호등 | `circuits/02_traffic/` | 4방향 13단계, 보행자 점멸, 점멸 모드, 리셋 |
+| FPGA ADC | `circuits/03_adc/` | 3개 직렬 프레임, 명령·채널·12비트 샘플·리셋 |
+
+## VS Code에서 FPGA 시뮬레이션
+
+1. `LAB5.code-workspace`를 연다.
+2. `Terminal > Run Task...`를 누른다.
+3. 회로별 `Simulate` 작업을 실행한다. 터미널의 `PASS`와 `build/sim/wave.vcd`를 확인한다.
+4. 이어서 같은 회로의 `Open waveform` 작업을 실행하고 Explorer의 `wave.vcd`를 클릭한다.
+5. 텍스트로 보이면 탭 우클릭 후 `Reopen Editor With... > VaporView`를 선택한다.
+
+Icarus Verilog와 VaporView가 필요하다. 시뮬레이션은 `simulation.json`에 명시된 파일만 컴파일하며, 변경된 소스와 파형의 해시도 확인한다.
+
+## STM32 사용 순서
+
+과제3과 과제4는 서로 다른 완성본이다. 한 번에 하나만 사용한다.
+
+1. 원본 `C:/Users/young/Documents/ece2_474/Core/Src/ece2_474_routine.c`를 별도 이름으로 백업한다.
+2. 선택한 과제 폴더의 `ece2_474_routine.c` 내용을 원본 파일 전체에 복사한다.
+3. STM32Cube 확장에서 Configure, Build를 실행한다.
+4. 실제 보드 실험은 과제3과 과제4를 각각 따로 빌드·다운로드해 확인한다.
+
+두 파일은 ece2_474 v1.1.0의 현재 `ece2_474.h`, `main.h`, TIM3/TIM6 설정을 기준으로 작성했고 ARM GCC 문법 검사를 통과했다. 원본 ece2_474 프로젝트 파일은 이 저장소를 만들면서 수정하지 않았다.
+
+## Vivado 작업 범위
+
+현재 단계에는 XDC, Vivado 프로젝트, 합성, 구현, 비트스트림을 넣지 않았다. 장비 교재의 실제 핀맵과 보드 연결을 확인하지 않고 핀을 추측하면 잘못된 연결이 될 수 있기 때문이다. 이후 실험 단계에서 교재 핀표에 맞춰 XDC를 작성하고 Vivado 구현을 진행한다.
+
+FPGA 설계 기준 클록은 50 MHz이며 최상위 모듈은 각각 `piano`, `traffic`, `adc`다. 테스트벤치에서는 시간을 단축하기 위해 분주 매개변수를 작게 덮어쓴다.
+
+## 출처
+
+- `ece2_474/docs/STM32_1.md`
+- `ece2_474/docs/FPGA_additional.md`
+- `ece2_474/docs/STM32_4week_plan.pdf`

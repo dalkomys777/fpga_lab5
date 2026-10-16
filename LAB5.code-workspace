@@ -1,0 +1,179 @@
+{
+  "folders": [
+    {
+      "name": "FPGA LAB5",
+      "path": "."
+    },
+    {
+      "name": "01_piano",
+      "path": "circuits/01_piano"
+    },
+    {
+      "name": "02_traffic",
+      "path": "circuits/02_traffic"
+    },
+    {
+      "name": "03_adc",
+      "path": "circuits/03_adc"
+    },
+    {
+      "name": "STM32 ece2_474",
+      "path": "../ece2_474"
+    }
+  ],
+  "settings": {
+    "editor.fontSize": 18,
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "off",
+    "files.associations": {
+      "*.v": "verilog"
+    },
+    "stm32cube-ide-clangd.path": "cube",
+    "stm32cube-ide-clangd.arguments": [
+      "starm-clangd",
+      "--query-driver=${env:CUBE_BUNDLE_PATH}/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc*",
+      "--query-driver=${env:CUBE_BUNDLE_PATH}/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++*"
+    ]
+  },
+  "extensions": {
+    "recommendations": [
+      "hudson-river-trading.vscode-slang",
+      "lramseyer.vaporview"
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "01 Piano - Simulate",
+        "type": "process",
+        "command": "python3",
+        "windows": {
+          "command": "C:/Users/young/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe"
+        },
+        "args": [
+          "tools/fpga_lab.py",
+          "simulate"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:01_piano}"
+        },
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": true
+        },
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "label": "02 Piano - Open waveform",
+        "type": "process",
+        "command": "python3",
+        "windows": {
+          "command": "C:/Users/young/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe"
+        },
+        "args": [
+          "tools/fpga_lab.py",
+          "wave"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:01_piano}"
+        },
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": true
+        }
+      },
+      {
+        "label": "03 Traffic - Simulate",
+        "type": "process",
+        "command": "python3",
+        "windows": {
+          "command": "C:/Users/young/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe"
+        },
+        "args": [
+          "tools/fpga_lab.py",
+          "simulate"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:02_traffic}"
+        },
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": true
+        }
+      },
+      {
+        "label": "04 Traffic - Open waveform",
+        "type": "process",
+        "command": "python3",
+        "windows": {
+          "command": "C:/Users/young/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe"
+        },
+        "args": [
+          "tools/fpga_lab.py",
+          "wave"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:02_traffic}"
+        },
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": true
+        }
+      },
+      {
+        "label": "05 ADC - Simulate",
+        "type": "process",
+        "command": "python3",
+        "windows": {
+          "command": "C:/Users/young/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe"
+        },
+        "args": [
+          "tools/fpga_lab.py",
+          "simulate"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:03_adc}"
+        },
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": true
+        }
+      },
+      {
+        "label": "06 ADC - Open waveform",
+        "type": "process",
+        "command": "python3",
+        "windows": {
+          "command": "C:/Users/young/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe"
+        },
+        "args": [
+          "tools/fpga_lab.py",
+          "wave"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:03_adc}"
+        },
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": true
+        }
+      }
+    ]
+  }
+}

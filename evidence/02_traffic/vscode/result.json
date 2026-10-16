@@ -1,0 +1,14 @@
+{
+  "status": "SIMULATED",
+  "run": "run-b7aadaa537174f9a85ac588a3023eb35",
+  "functional_correctness": "NOT_ASSESSED",
+  "inputs_sha256": {
+    "simulation.json": "91354a2b977e7f848ad0a87a544c896bda2deac00000fd5b962627de8ec4bf02",
+    "src/second_tick.v": "2b02d787f75a65ff4a9cfd0d93cf142157b404420a3c5114723283fac27bf1cb",
+    "src/traffic_sequence.v": "cbe7b5a5b9856543530fcb76842fd0304e593b7c3674bd8f6bd12bdd8b7a70b1",
+    "src/traffic_lights.v": "2775cd1b4602d635a1290f8e1230ea6699757c9fb10bc790bb60bdf17dcb4cd5",
+    "src/traffic.v": "03a48bcd3a3253f3e3daa44ef58612e400f90fa7f305ec6c2c188162f68bcf44",
+    "sim/tb_design.v": "862f8b76862a41ca9e908e0ad7ba8cc67c6d6f9dff85ca1006d9259104c5a4a1"
+  },
+  "wave_sha256": "3a505cdd5effdcc4522c1d76ee7b7d07a0dd64357c87b63a00534e0514ff5549"
+}
