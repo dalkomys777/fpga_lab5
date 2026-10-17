@@ -20,3 +20,6 @@ Thumbs.db
 # 편집 가능한 보고서 원본은 로컬에 두고 제출용 PDF만 추적합니다.
 reports/pre/*.hwpx
 reports/post/*.hwpx
+
+# VaporView의 사용자별 화면 배치와 절대 경로
+**/wave.json
