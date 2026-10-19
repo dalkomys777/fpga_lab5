@@ -1,6 +1,6 @@
 {
   "status": "SIMULATED",
-  "run": "run-b7aadaa537174f9a85ac588a3023eb35",
+  "run": "run-b4faf246bc64455e81c89ade4993d12b",
   "functional_correctness": "NOT_ASSESSED",
   "inputs_sha256": {
     "simulation.json": "91354a2b977e7f848ad0a87a544c896bda2deac00000fd5b962627de8ec4bf02",
@@ -10,5 +10,5 @@
     "src/traffic.v": "03a48bcd3a3253f3e3daa44ef58612e400f90fa7f305ec6c2c188162f68bcf44",
     "sim/tb_design.v": "862f8b76862a41ca9e908e0ad7ba8cc67c6d6f9dff85ca1006d9259104c5a4a1"
   },
-  "wave_sha256": "3a505cdd5effdcc4522c1d76ee7b7d07a0dd64357c87b63a00534e0514ff5549"
+  "wave_sha256": "c0ce9479b91518503bf17dc39e5a8050dbd4650749daa79a8fb0374b9abef6b5"
 }

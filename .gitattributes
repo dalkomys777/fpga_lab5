@@ -2,3 +2,5 @@
 *.png binary
 *.hwpx binary
 *.vcd binary
+*.elf binary
+*.mp4 binary

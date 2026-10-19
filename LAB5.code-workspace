@@ -173,6 +173,52 @@
           "panel": "dedicated",
           "clear": true
         }
+      },
+      {
+        "label": "07 STM32 Task 3 - Activate and Build",
+        "type": "process",
+        "command": "powershell.exe",
+        "args": [
+          "-NoProfile",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-File",
+          "${workspaceFolder:FPGA LAB5}/stm32/tools/activate_and_build.ps1",
+          "-Task",
+          "task3"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:FPGA LAB5}"
+        },
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": true
+        }
+      },
+      {
+        "label": "08 STM32 Task 4 - Activate and Build",
+        "type": "process",
+        "command": "powershell.exe",
+        "args": [
+          "-NoProfile",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-File",
+          "${workspaceFolder:FPGA LAB5}/stm32/tools/activate_and_build.ps1",
+          "-Task",
+          "task4"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:FPGA LAB5}"
+        },
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": true
+        }
       }
     ]
   }

@@ -26,12 +26,14 @@ Icarus Verilog와 VaporView가 필요하다. 시뮬레이션은 `simulation.json
 
 과제3과 과제4는 서로 다른 완성본이다. 한 번에 하나만 사용한다.
 
-1. 원본 `C:/Users/young/Documents/ece2_474/Core/Src/ece2_474_routine.c`를 별도 이름으로 백업한다.
-2. 선택한 과제 폴더의 `ece2_474_routine.c` 내용을 원본 파일 전체에 복사한다.
-3. STM32Cube 확장에서 Configure, Build를 실행한다.
-4. 실제 보드 실험은 과제3과 과제4를 각각 따로 빌드·다운로드해 확인한다.
+1. `Terminal > Run Task...`에서 `07 STM32 Task 3 - Activate and Build` 또는 `08 STM32 Task 4 - Activate and Build`를 선택한다.
+2. 작업이 선택한 파일을 실제 `ece2_474` 프로젝트에 복사하고 ARM Debug ELF를 빌드한다.
+3. `ece2_474.code-workspace`의 Run and Debug에서 F5를 눌러 보드에 다운로드한다.
+4. 실제 보드 실험은 과제3과 과제4를 각각 따로 확인한다.
 
-두 파일은 ece2_474 v1.1.0의 현재 `ece2_474.h`, `main.h`, TIM3/TIM6 설정을 기준으로 작성했고 ARM GCC 문법 검사를 통과했다. 원본 ece2_474 프로젝트 파일은 이 저장소를 만들면서 수정하지 않았다.
+2026-10-19 기준 두 과제 모두 실제 ARM Debug 빌드를 통과했고 검증 ELF는 `stm32/prebuilt/`에 보관했다. 실험 시작을 위해 실제 `ece2_474` 프로젝트에는 과제3이 활성화되어 있다.
+
+두 파일은 ece2_474 v1.1.0의 현재 `ece2_474.h`, `main.h`, TIM3/TIM6 설정을 기준으로 작성했고 실제 ARM Debug 빌드를 통과했다. 교체 전 활성 파일은 `ece2_474/lab5_backup/2026-10-19_before_lab5/`에 보관했다.
 
 ## Vivado 작업 범위
 

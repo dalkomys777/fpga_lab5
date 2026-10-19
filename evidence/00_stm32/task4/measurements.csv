@@ -1,0 +1,5 @@
+press_no,pwm_compare,expected_duty_pct,measured_frequency_hz,measured_period_ms,measured_high_ms,measured_duty_pct,result,scope_image,notes
+0,250,25,,,,,,,initial state
+1,500,50,,,,,,,
+2,750,75,,,,,,,
+3,250,25,,,,,,,wraparound

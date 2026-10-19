@@ -1,6 +1,6 @@
 {
   "status": "SIMULATED",
-  "run": "run-1998b70dcf0346ceb66b504bbd6417e6",
+  "run": "run-852e393cd18046a097dcf22ca77975f9",
   "functional_correctness": "NOT_ASSESSED",
   "inputs_sha256": {
     "simulation.json": "c509035222606bbaae335dbd2e11e21115b55f2caea03402ea3ff8326f41f29d",
@@ -9,5 +9,5 @@
     "src/piano.v": "cccbc2f0ae233a6471ab1975a6c2767cae7a2783cf0012a63278e185814db30f",
     "sim/tb_design.v": "befb3c6bc577c0ad0cbdbbc22f381f2d44d2dc04027b31f9eedcdb62f23790d6"
   },
-  "wave_sha256": "67956bf8aa4e93707b72e1b856f54ebacc0e9061abf08e52fe58db495f3de1b2"
+  "wave_sha256": "9f6366c51729e140f0040c192a645f7d16df5f34ec2f666ace57fc4728c53764"
 }

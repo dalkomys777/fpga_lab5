@@ -1,0 +1,6 @@
+press_no,led_interval_ticks,expected_seconds,measured_seconds,result,media_file,notes
+0,10,1.000,,,,initial state
+1,20,2.000,,,,
+2,40,4.000,,,,
+3,80,8.000,,,,
+4,10,1.000,,,,wraparound

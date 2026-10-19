@@ -1,11 +1,13 @@
 STM32_1 Task 3 full ARM Debug build verification
-Date: 2026-10-17 (Asia/Seoul)
+Date: 2026-10-19 (Asia/Seoul)
 Source: stm32/task3_interrupt_led/ece2_474_routine.c
+Source SHA-256: 4242AC42AB4751FDE24F235BF442CA55529355EA9CDB1D7B88DF9A4C857A2C84
 Toolchain: GNU Arm Embedded 14.3.1
 Target: NUCLEO-G474RE / STM32G474RE
-Result: configure exit 0, build exit 0, [31/31] Linking C executable ece2_474.elf
+Result: exit 0, Building routine object, Linking C executable ece2_474.elf
 RAM: 2656 B / 128 KB (2.03%)
 FLASH: 26036 B / 512 KB (4.97%)
-ELF bytes: 1643956
-ELF SHA-256: 0f7d88880fac277335ebcda9ce982e1963a96a3f381d6867c1d347fc4ba93b6e
-Vivado/board run: deferred to the laboratory session.
+ELF bytes: 1632804
+ELF SHA-256: 87E656C472EA5DC02000DC2DDCC98673BCE9A0E307C60159EE59DE6B4F64E123
+Active state after verification: Task 3 source and Task 3 ELF.
+Board download and physical measurement: deferred to the laboratory session.
