@@ -7,4 +7,4 @@
 - 예상 자기검사 결과: `PASS piano: all 8 tones, silence, multiple keys, reset`
 - 파형: `build/sim/wave.vcd`
 
-XDC와 Vivado 프로젝트는 교재의 실제 보드 핀표를 확인한 뒤 추가한다. 테스트벤치는 시뮬레이션 시간을 줄이기 위해 분주 매개변수를 작게 덮어쓴다.
+Vivado에서는 `piano`를 최상위로 지정하고 `constraints/lab5_piano.xdc`를 추가한다. DIP1~DIP8이 낮은 도(C4)부터 높은 도(C5)까지 대응하며, 테스트벤치는 시뮬레이션 시간을 줄이기 위해 분주 매개변수를 작게 덮어쓴다.

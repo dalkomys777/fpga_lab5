@@ -2,7 +2,8 @@
   "sources": [
     "src/adc_command.v",
     "src/serial_frame16.v",
-    "src/adc.v"
+    "src/adc.v",
+    "src/adc_hw.v"
   ],
   "testbench": "sim/tb_design.v",
   "simulation_top": "tb"

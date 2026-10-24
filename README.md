@@ -35,11 +35,17 @@ Icarus Verilog와 VaporView가 필요하다. 시뮬레이션은 `simulation.json
 
 두 파일은 ece2_474 v1.1.0의 현재 `ece2_474.h`, `main.h`, TIM3/TIM6 설정을 기준으로 작성했고 실제 ARM Debug 빌드를 통과했다. 교체 전 활성 파일은 `ece2_474/lab5_backup/2026-10-19_before_lab5/`에 보관했다.
 
-## Vivado 작업 범위
+## Vivado 프로젝트 생성 기준
 
-현재 단계에는 XDC, Vivado 프로젝트, 합성, 구현, 비트스트림을 넣지 않았다. 장비 교재의 실제 핀맵과 보드 연결을 확인하지 않고 핀을 추측하면 잘못된 연결이 될 수 있기 때문이다. 이후 실험 단계에서 교재 핀표에 맞춰 XDC를 작성하고 Vivado 구현을 진행한다.
+세 회로의 HBE-Combo II-DLD Spartan-7 S75(`xc7s75fgga484-1`)용 XDC를 각 `constraints/` 폴더에 준비했다. 기준 클록은 50 MHz(20 ns)다.
 
-FPGA 설계 기준 클록은 50 MHz이며 최상위 모듈은 각각 `piano`, `traffic`, `adc`다. 테스트벤치에서는 시간을 단축하기 위해 분주 매개변수를 작게 덮어쓴다.
+| 회로 | Vivado 최상위 모듈 | 제약 파일 |
+|---|---|---|
+| 피아노 | `piano` | `circuits/01_piano/constraints/lab5_piano.xdc` |
+| 신호등 | `traffic` | `circuits/02_traffic/constraints/lab5_traffic.xdc` |
+| ADC | `adc_hw` | `circuits/03_adc/constraints/lab5_adc.xdc` |
+
+Vivado에서 RTL 파일을 Design Sources로 추가하고 해당 회로의 XDC를 Constraints로 추가한 뒤 표의 최상위 모듈을 설정한다. ADC는 `adc.v`가 아니라 `adc_hw.v`를 최상위로 지정해야 디버그 신호가 외부 핀으로 노출되지 않는다. 테스트벤치에서는 시뮬레이션 시간을 줄이기 위해 분주 매개변수를 작게 덮어쓴다.
 
 ## 출처
 
