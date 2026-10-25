@@ -39,13 +39,19 @@ Icarus Verilog와 VaporView가 필요하다. 시뮬레이션은 `simulation.json
 
 세 회로의 HBE-Combo II-DLD Spartan-7 S75(`xc7s75fgga484-1`)용 XDC를 각 `constraints/` 폴더에 준비했다. 기준 클록은 50 MHz(20 ns)다.
 
-| 회로 | Vivado 최상위 모듈 | 제약 파일 |
-|---|---|---|
-| 피아노 | `piano` | `circuits/01_piano/constraints/lab5_piano.xdc` |
-| 신호등 | `traffic` | `circuits/02_traffic/constraints/lab5_traffic.xdc` |
-| ADC | `adc_hw` | `circuits/03_adc/constraints/lab5_adc.xdc` |
+| 회로 | 바로 열 프로젝트 | Design Top | Simulation Top |
+|---|---|---|---|
+| 피아노 | `circuits/01_piano/lab5_piano.xpr` | `piano` | `tb` |
+| 신호등 | `circuits/02_traffic/lab5_traffic.xpr` | `traffic` | `tb` |
+| ADC | `circuits/03_adc/lab5_adc.xpr` | `adc_hw` | `tb` |
 
-Vivado에서 RTL 파일을 Design Sources로 추가하고 해당 회로의 XDC를 Constraints로 추가한 뒤 표의 최상위 모듈을 설정한다. ADC는 `adc.v`가 아니라 `adc_hw.v`를 최상위로 지정해야 디버그 신호가 외부 핀으로 노출되지 않는다. 테스트벤치에서는 시뮬레이션 시간을 줄이기 위해 분주 매개변수를 작게 덮어쓴다.
+각 `.xpr`에는 RTL, 테스트벤치, XDC, FPGA Part와 Top 설정이 이미 들어 있다. Vivado에서 해당 파일을 열고 `Run Behavioral Simulation`, `Run Synthesis`, `Run Implementation`, `Generate Bitstream` 순서로 실행하면 된다. ADC는 `adc_hw`가 하드웨어 최상위로 설정되어 있어 디버그 신호가 외부 핀으로 노출되지 않는다.
+
+프로젝트를 다시 만들어야 할 때는 저장소 루트에서 다음 명령을 실행한다.
+
+```powershell
+vivado -mode batch -source create_projects.tcl
+```
 
 ## 출처
 
